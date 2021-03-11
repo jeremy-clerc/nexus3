@@ -44,4 +44,4 @@ jobs:
         with:
           ruby-version: 2.5 # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-      - run: KITCHEN_LOCAL_YAML=.kitchen.docker.yml bundle exec kitchen verify ${INSTANCE}
+      - run: KITCHEN_LOCAL_YAML=.kitchen.docker.yml bundle exec kitchen verify ${{ matrix.instance }}
